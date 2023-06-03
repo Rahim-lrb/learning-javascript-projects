@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises challenges</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body style="direction: rtl;">
+    <!-- ! aladhan -->
+    <div >
+        <!-- city name + date -->
+        <div style="margin-top: 30px;">
+            <!-- city name -->
+            <div style="margin-right: 40px;">
+                <h1 id="city">الرياض</h1>
+                <h6 id="date">الجمعة 24 نوفمبر</h6>
+            </div>
+            <hr>
+            <!-- prayers -->
+            <div style="height: 210px; margin-top: 50px; display: flex; justify-content: space-around;">
+                <!-- CARD -->
+                <div class="card">
+                    <div class="header">
+                        <h1>الفجر</h1>
+                    </div>
+                    <div class="body center" style="height: 80%;">
+                        <h1 class="time" id="time1">4:30</h1>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <!-- CARD -->
+                <div class="card">
+                    <div class="header">
+                        <h1>الشروق</h1>
+                    </div>
+                    <div class="body center" style="height: 80%;">
+                        <h1 class="time" id="time2">4:30</h1>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <!-- CARD -->
+                <div class="card">
+                    <div class="header">
+                        <h1>الظهر</h1>
+                    </div>
+                    <div class="body center" style="height: 80%;">
+                        <h1 class="time" id="time3">4:30</h1>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <!-- CARD -->
+                <div class="card">
+                    <div class="header">
+                        <h1>العصر</h1>
+                    </div>
+                    <div class="body center" style="height: 80%;">
+                        <h1 class="time" id="time4">4:30</h1>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <!-- CARD -->
+                <div class="card">
+                    <div class="header">
+                        <h1>المغرب</h1>
+                    </div>
+                    <div class="body center" style="height: 80%;">
+                        <h1 class="time" id="time5">4:30</h1>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="header">
+                        <h1>العشاء</h1>
+                    </div>
+                    <div class="body center" style="height: 80%;">
+                        <h1 class="time" id="time6">4:30</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center" style="margin-top: 30px;">
+            <!-- change city -->
+            <select  name="" id="select" style="width: 300px; height: 45PX; font-size: 19px; background: none; color: white; padding: 5px ;border-radius: 20PX; background-color: #5709ee;">
+            </select>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

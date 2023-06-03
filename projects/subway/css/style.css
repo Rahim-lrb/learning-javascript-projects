@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game {
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    position: relative;
+    margin: auto;
+    top: 70px;
+    background-image: linear-gradient(to bottom, #c4baFF, #ffffff);
+    overflow: hidden;
+}
+
+.player {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    background-color: purple;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -100px;
+    left: 100px;
+    background-color: black;
+    animation: move-down 2s linear infinite;
+}
+
+@keyframes move-down {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 100%;
+    }
+    
+}
+
+
+
+.score {
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+    font-size: larger;
+    z-index: 100;
+}

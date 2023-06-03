@@ -1,0 +1,20 @@
+- create json object questions
+- start creating html markup + stylin
+- add dummy data
+- create the styling
+- fetch number of questions from json object 
+- show questions count and qst category
+- show the number of bullets depend on qst count
+- set the number for the right and wrong answers
+- create countdown timer
+- fetch qst 
+- show qst 
+- check answer and showthe next qst
+- if the time ended , mark qst as wrong
+- add class on the bullet after answering
+- if qsts ended show result
+
+ideas 
+- many json obj and choose lang
+- add many qst and choose randomly from them 
+- randomize anwsers

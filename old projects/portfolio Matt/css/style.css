@@ -1,0 +1,133 @@
+:root {
+    --main-color: #7510f7;
+}
+/* *Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* *end Global Rules */
+/* start header */
+header {
+    padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+ul {
+  display: flex;
+}
+li {
+  padding: 20px;
+}
+.container .logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--main-color);
+  text-decoration: none;
+  text-transform: capitalize;
+  position: relative;
+}
+.container .logo::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+}
+.container .logo:hover {
+  display: block;
+}
+.container a {
+  text-decoration: none; 
+  font-size: 23px;
+  font-weight: 700;
+}
+.container .i1 {
+  color: var(--main-color);
+}
+.container .i2 {
+  background-color: var(--main-color);
+  color: white;
+  /* border: 2px solid var(--main-color); */
+  border-radius: 30px;
+  padding: 12Px 22px;
+  box-shadow: 7px 13px 16px rgb(0 0 0 / 50%);
+}
+.container .i2:hover {
+  background-color: #9749fe;
+  border: none;
+}
+.landing {
+  width: 100%;
+  height: calc(100vh - 98.2px);
+  position: relative;
+}
+.landing img {
+  position: absolute;
+  right: 50%;
+  bottom: 0%;
+  transform: translate(50%);
+  width: 300px;
+}
+.text {
+  display: block;
+  position: absolute;
+  top: 6%;
+  right: 50%;
+  transform: translateX(50%);
+  text-align: center;
+}
+.landing h2 {
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+.landing p {
+  font-size: 20px;
+  font-weight: 400;
+}

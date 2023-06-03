@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-height: 20000px;
+    background-color: #eee;
+}
+
+.scroller {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 5px;
+    background-color: #0075ff;
+    z-index: 2;
+}
+
+
+#btn {
+    /* display: none; */
+    background-color: red; 
+    color: white; 
+    padding: 8px 20px; 
+    position: fixed; 
+    bottom: 20px; 
+    right: -61px; 
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btn.show {
+    right: 10px;
+}
+
+
+/* bar */
+::-webkit-scrollbar {
+    width: 50px;
+}
+/* ::-webkit-scrollbar-button {
+    background-color: blue;
+} */
+::-webkit-scrollbar-track {
+    background-color: #0075ff;
+
+}
+::-webkit-scrollbar-thumb { /* handle*/
+    background-color: rgba(205, 92, 92, 0.491);
+} 
+::-webkit-scrollbar-thumb:hover { /* handle */
+    background-color: indianred;
+}

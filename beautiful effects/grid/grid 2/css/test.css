@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, /* ! */
+body {
+    padding: 15px;
+    background-color: hsl(118, 100%, 31%);
+    background: linear-gradient(45deg, #190f2c, #200b30);
+}
+
+h1, h2, h3, h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+li {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+.grid-wrapper > div > img {
+    width: 100%;
+    height: 100%; /* ! 3 so it stretches to fill the epmty place / align items wont solve it*/
+    object-fit: cover; /* ! 4 it stretches the photo bcw of the w and h*/
+    border-radius: 6px;
+}
+.grid-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px; /* ! 1 */
+    grid-auto-flow: dense; /* ! 2*/
+}
+ 
+.grid-wrapper .wide {
+    grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+    grid-row: span 2;
+}
+
+.grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+
+
+/* .grid-wrapper > div:nth-child(3) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+.grid-wrapper>div:nth-child(6) {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.grid-wrapper>div:nth-child(8) {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+
+.grid-wrapper>div:nth-child(4) {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.grid-wrapper>div:nth-child(7) {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 5;
+} */

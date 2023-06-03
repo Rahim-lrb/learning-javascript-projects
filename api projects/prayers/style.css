@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+body {
+    direction: rtl;
+    background: linear-gradient(45deg, #240165, #05001C);
+    height: 100vh;
+    font-family: system-ui;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
+#city {
+    font-size: 150px;
+    color: white;
+    font-weight: 400;
+}
+h6 {
+    font-size: 40px;
+    color: white;
+    font-weight: 200;
+}
+hr {
+    margin: 0 50px;
+    border-color: #5200e1;
+}
+
+
+
+
+.card {
+    width: 12%;
+    height: 95%;
+    background-color: white;
+    font-size: 20px;
+    box-shadow: 0 10px 5px rgb(0, 0, 0, 30%);
+}
+.header {
+    background: linear-gradient(45deg, #5709ee, #7a37bf);
+    color: white;
+}
+.header h1 {
+    font-weight: 400;
+    padding: 5px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    font-size: 40px;
+}
+select option:hover {
+    background-color: #7530fe;
+}

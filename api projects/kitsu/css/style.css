@@ -1,0 +1,105 @@
+@font-face {
+    font-family: mine;
+    src: url(../fonts/kitsu/Kitsu_XD.ttf);
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: mine;
+    background-color: #03001d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrapper {
+    width: 600px;
+    border: 1px solid white;
+    border-bottom: none;
+    margin: 60px 0;
+    background-color: #253663;
+}
+.wrapper .title {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+}
+.generate {
+    color: white;
+    background: linear-gradient(90deg, #398b9c, #0e3d7b);
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 0;
+}
+img {
+    width: 320px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+.image {
+    display: grid;
+    place-items: center;
+    margin-bottom: 40px;
+}
+/* ! info */
+.info {
+    background-color: #03001d;
+    color: white;
+    padding: 9px;
+}
+
+
+
+.rate {
+    display: flex;
+    justify-content: space-between;
+}
+.rate .box {
+    background-color: #253663;
+    width: 288px;
+    display: grid;
+    place-items: center;
+    padding: 8px 0;
+    line-height: 1.4;
+    position: relative;
+}
+.rate .box::after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    border-bottom: 1px dotted #375274;
+}
+
+
+.title, .title2 {
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+    padding: 20px 0;
+    margin-left: 4px;
+}
+
+.read {
+    font-size: 20px;
+    margin-left: 13px;
+    position: relative;
+}
+.read::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 6px solid white;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+}

@@ -1,0 +1,525 @@
+/* start variables */
+:root {
+    /* colors */
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-background: #f6f6f6;
+  --section-padding: 60px;
+  /* --main-duration: 0.5s; */
+}
+/* end variables */
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+
+
+
+
+/*      !   start header        */
+header {
+    padding: 20px; 
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo  {
+    width: 60px;
+}
+  /** menu **/
+header .container .links {
+    position: relative; /* ! so we move the mega menu inside the area*/
+}
+header .container .links .icon {
+    width: 30px;
+    display: flex; /* ?why */
+    flex-wrap: wrap; /* ! the icon width is set, the span will leap when there is no space left  */
+    justify-content: flex-end; /* ?why */
+}
+header .container .links .icon span {
+    background-color: #333;
+    margin-top: 5px;
+    height: 2px;
+}
+header .container .links span:first-child {
+    width: 100%;
+}
+header .container .links span:last-child {
+    width: 30px;
+}
+header .container .links span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-duration);
+}
+header .container .links .icon:hover span:nth-child(2) {
+    width: 100%;
+}
+/* *start mega*  */
+header .container .links .mega {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--section-background);
+    position: absolute; /* ! to get it out of the workflow (even tho you display it the header wont contain it)*/
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 10;
+}
+
+header .container .links .mega li a {
+    display: block; /* ? why */
+    text-decoration: none;
+    color: #222;
+    padding: 15px;
+    transition: var(--main-duration);
+}
+header .container .links .mega li:not(last-child) {
+    border-bottom: 2px solid #ddd;
+}
+
+header .links .mega::before {
+    content: "";
+    border-width: 10PX 10PX 10PX 10PX;
+    border-style: solid solid solid solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -9%;
+}
+header .links .mega li a:hover {
+    padding: 15px 25px;
+}
+header .container .links:hover .mega {
+    display: block;
+}
+/* end header */
+
+
+
+/*    !   start landing       */
+.landing {
+    background-image: url(../images/landing.jpg);
+    height: calc(100vh - 64px);
+    background-size: cover;
+    position: relative;
+}
+.landing .landing-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px; /* ? why */
+    max-width: 100%;
+    text-align: center;
+}
+.landing .landing-text h1 {
+    margin: 0;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+}
+.landing .landing-text p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+/* end landing */
+
+
+
+/*         !       start features         */
+.features {
+    padding-top: 60PX;
+    padding-bottom: 60PX;
+    background-color: var(--section-background);
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.features .box {
+    text-align: center;
+    padding: 20px;
+}
+.features .box i {
+  font-size: 50px;
+  color: var(--main-color);
+}
+.features .box h3 {
+  color: black;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 30px 0;
+}
+.features .box p {
+  font-size: 17px;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+/* end features */
+/* ! start components ! */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.special-heading + p { /* ! style the p only if there is special heading */
+  color: #10cab7;
+  margin: -30px 0 0;
+  text-align: center;
+  font-size: 20px;
+  color: #797979;
+}
+
+@media (max-width: 768px) {
+  .special-heading {
+    font-size: 60px;
+  }
+
+  .special-heading+p {
+    margin-top: -20px;
+  }
+}
+
+
+
+/* ! start services */
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.services .services-content .srv {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .services-content .srv i {
+  color: var(--main-color);
+  flex-basis: 60px; /* ! better than width,it can be like width or height depends on the flex direction(row or column)*/
+} 
+.services .services-content .srv i .text {
+  flex: 1; /* ! it takes the reso of the space*/
+}
+.services .services-content .srv i .text h3 {
+  color: var(--secondary-color);
+}
+.services .services-content .srv i .text p {
+  color: var(--secondary-color);
+}
+
+.services .srv .text h3 {
+  margin: 0 0 20px;
+}
+
+.services .srv .text p {
+  color: #777;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.services .column .image img {
+  text-align: center;
+  position: relative;
+}
+
+.services .column .image img {
+  width: 260px;
+}
+
+.services .column .image img::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--secondary-color);
+  width: 80px;
+  height: 100%;
+}
+
+@media (max-width:1199px) {
+  .services .column .image img {
+    display: none;
+  }
+}
+/* start services */
+
+
+
+/* ! start portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+
+/* .cards {
+    display: flex;
+    margin-top: 83px;
+    align-items: center;
+  }
+  .cards .card:nth-child(2) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .cards .card img {
+    width: 360px;
+  }
+  .cards .card .card-text {
+    padding: 0 20PX;
+  }
+  .cards .card {
+    background-color: white;
+  }
+  .cards .card .card-text h3 {
+    margin-bottom: 18px;
+  }
+  .cards .card .card-text p {
+    color: #595858;
+    font-size: 16px;
+    line-height: 1.6;
+  } */
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 80px;
+}
+
+.portfolio .portfolio-content .card {
+  background-color: white;
+}
+
+.portfolio .portfolio-content .card img {
+  max-width: 100%;
+}
+
+.portfolio .portfolio-content .card .info {
+  padding: 20px;
+}
+
+.portfolio .portfolio-content .card .info h3 {
+  margin: 0;
+}
+
+.portfolio .portfolio-content .card .info p {
+  font-size: 17px;
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* end portfolio */
+
+
+
+/* ! start about */
+.about {
+  padding-top: var(--section-padding);
+  padding-bottom: calc(var(--section-padding) + 60px);
+  display: flex;
+}
+
+.about .about-content {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  /* ! in case we increase the content it will leeap to the next line*/
+  justify-content: space-between;
+}
+
+.about .image img {
+  max-width: 100%;
+}
+
+.about .image {
+  position: relative;
+  width: 250px;
+  height: 375px;
+}
+
+.about .image::before {
+  content: "";
+  background-color: #ebeced;
+  position: absolute;
+  width: 100px;
+  /* height: 100%; */
+  height: calc(100% + 88px);
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+}
+
+.about .image::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 300px;
+  border-left: 80px solid var(--main-color);
+  border-bottom: 80px solid var(--main-color);
+  right: -150px;
+  top: -40px;
+  z-index: -1;
+}
+
+.about .about-content .text {
+  flex-basis: calc(100% - 500px);
+  /* width: 500PX; */
+  /* flex: 1;
+    padding: 200px; */
+}
+
+.about .about-content .text p:first-of-type {
+  font-weight: bold;
+  line-height: 2;
+  margin-bottom: 50px;
+}
+
+.about .about-content .text hr {
+  width: 50%;
+  display: inline-block;
+  border-color: #10cab7;
+  transform: translate(50%, 50%);
+}
+
+.about .about-content .text p:last-of-type {
+  line-height: 2;
+  color: #777;
+}
+
+@media (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .image::before,
+  .about .image::after {
+    display: none;
+  }
+
+  .about .about-content .image {
+    margin: 0 auto 60px;
+  }
+}
+
+/* end about */
+/* ! start contact */
+.contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--section-background);
+}
+
+.contact .info {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.contact .info .label {
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  letter-spacing: -2px;
+  margin-bottom: 15px
+}
+
+.contact .info .link {
+  color: var(--main-color);
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.contact .info .social {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.contact .info .social i {
+  color: var(--secondary-color);
+  margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+  .contact .info .label {
+    font-size: 25px;
+  }
+}
+
+/* end contact */
+
+
+/* ! start footer*/
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer span {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* end footer*/

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <script src="https://kit.fontawesome.com/4e187043c1.js" crossorigin="anonymous"></script>
+        <title>Image Slider</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!-- Container for the image gallery -->
+        <div class="container">
+            <div class="carousel-container">
+                <i class="fas fa-arrow-left" id="prevBtn" class="button"></i>
+                <i class="fas fa-arrow-right" id="nextBtn" class="button"></i>
+                <div class="carousel-slide">
+                    <img class="image" src="./images/bg5.jpg"  id="lastClone" alt="We The People of Canada Introduction Slide 5">
+                    <img src="./images/bg1.jpg" alt="We The People of Canada Introduction Slide 1"> 
+                    <img src="./images/bg2.jpg" alt="We The People of Canada Introduction Slide 2">
+                    <img src="./images/bg3.jpg" alt="We The People of Canada Introduction Slide 3">
+                    <img src="./images/bg4.jpg" alt="We The People of Canada Introduction Slide 4">
+                    <img src="./images/bg5.jpg"  alt="We The People of Canada Introduction Slide 5">
+                    <img src="./images/bg1.jpg" id="firstClone" alt="We The People of Canada Introduction Slide 1">
+                </div>
+            </div>
+            <div class="text-container">
+                <p id="text"></p>
+            </div>
+        </div>
+        <script src="main.js"></script>
+</body>
+</html>

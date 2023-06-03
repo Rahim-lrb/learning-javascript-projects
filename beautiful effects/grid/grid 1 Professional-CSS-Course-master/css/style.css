@@ -1,0 +1,88 @@
+/* variables */
+:root {
+    /* colors */
+    --main-color: #2196f3;
+    --alt-main-color: #1787e0;
+    --section-bg: #ececec;
+
+    /* fonts */
+
+    /* transition  */
+    --main-transition: 0.3s;
+    
+    --main-padding: 100px;
+}
+/* start global rules  */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+}
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+
+.page {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.4rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    background-image: url(https://bytegrad.com/course-assets/css/2/pattern.svg), linear-gradient(to bottom right, #8FD861, #2CC695 90%);
+    scrollbar-width: none;
+}
+.page .container {
+    min-height: 100vh;
+    width: 100%;
+    margin: 80px 60px ;
+    background-color: #fff;
+
+
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 65px 724px 1fr;
+}
+.page .container header {
+    grid-column: span 2;
+}
+page .container .side {
+    grid-row: 2 / 3;
+}
+/*..page .container .gallery
+.page .container footer */

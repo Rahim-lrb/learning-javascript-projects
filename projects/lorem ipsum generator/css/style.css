@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #b73bf1;
+}
+
+section {
+    width: 90vw;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+h3 {
+    font-size: 36px;
+    color: white;
+
+}
+
+
+form {
+    margin-top: 30px;
+}
+form label {
+    font-size: 24px;
+    color: white;
+    text-transform: capitalize;
+}
+form input {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0 10px;
+}
+form button {
+    background-color: #fcfcfc;
+    padding: 10px 30px;
+    border: none;
+    color: #b73bf1;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+
+
+article {
+    background-color: #fbf5f5;
+    width: 60%;
+    margin: 40px auto;
+    padding: 10px 30px ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+article p {
+    direction: ltr;
+    color: #7d7d7d;
+}
+
+article p:first-of-type {
+    margin-top: 30px;
+}
+
+article p:last-of-type {
+    margin-bottom: 30px;
+}
+article i {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    color: #b73bf1;
+    font-size: 24px;
+    transition: all 0.3s linear;
+}
+
+article .copied {
+    transform: scale(1.2);
+}
+article .copied::after {
+    content: "copied";
+    font-size: 10px;
+    color: white;
+    width: 40px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+}
+
+article.hide {
+    display: none;
+}

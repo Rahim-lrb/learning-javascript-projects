@@ -1,0 +1,104 @@
+:root {
+    --blue: rgb(61, 90, 254);
+    --light-blue: rgb(33, 150, 243);
+  }
+  
+  body {  
+    background-color: rgb(10, 10, 20);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    margin: 0px;
+  }
+  
+  .link {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    display: block; 
+    font-family: 'Permanent Marker', cursive;
+    font-size: clamp(2em, 8vmin, 7em);
+    padding: clamp(0.25em, 1vmin, 1em) clamp(1em, 4vmin, 4em);
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    color: var(--light-blue);
+  }
+  
+  .link:hover:before {
+    transition: width 600ms ease;
+    width: 100%; 
+  }
+  
+  .link:before {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--blue) var(--light-blue-percent),
+      var(--light-blue)
+    );
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+  }
+  
+  .link:nth-child(3) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  /* -- YouTube Link Styles -- */
+  
+  #source-link {
+    top: 60px;
+  }
+  
+  #source-link > i {
+    color: rgb(94, 106, 210);
+  }
+  
+  #yt-link {  
+    top: 10px;
+  }
+  
+  #yt-link > i {
+    color: rgb(239, 83, 80);
+  }
+  
+  .meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 350ms, border-color 350ms;
+    z-index: 10000;
+  }
+  
+  .meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .meta-link > i, .meta-link > span {
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  .meta-link > span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    transition: color 600ms;
+  }

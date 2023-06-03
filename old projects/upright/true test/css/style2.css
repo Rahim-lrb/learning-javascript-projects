@@ -1,0 +1,188 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+a:link {
+  text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+  padding: none;
+  margin: none;
+}
+li {
+  text-decoration: none;
+}
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&display=swap");
+:root {
+  --main-color: #006699;
+}
+
+body {
+  font-family: system-ui;
+}
+
+
+
+
+/* =========== solution with sticky ================= */
+/* ? start sidebar */
+.page {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 400px;
+  height: 150vh;
+  background-color: #e0e0e0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.content {
+  width: calc(100% - 400px);
+  height: 300vh;
+  background-color: #f00;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.parallex-section {
+  max-width: 280px;
+  height: 100vh;
+  grid-column: span 6;
+  background-color: red;
+}
+
+.home {
+  background-color: green;
+  grid-column: span 6;
+  /* background-color: blue; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebar h3 {
+  background-color: #006699;
+  color: white;
+  font-weight: 400;
+  line-height: 0.8;
+  font-size: 2.3rem;
+  padding-bottom: 10px;
+  margin: 40px 0 40px 40px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 100px;
+}
+.sidebar ul {
+  padding-left: 0;
+}
+.sidebar ul li a {
+  color: #006699;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  transition: all 0.4s;
+  margin-left: 60px;
+}
+.sidebar ul li a i {
+  font-size: 1.2rem;
+  margin-right: 1.3rem;
+}
+.sidebar ul li a:hover {
+  background-color: #f2f2f2;
+  padding: 20px 40px;
+  transform: translateX(-50%);
+}
+
+.sidebar ul li {
+  position: relative;
+  margin-bottom: 40px;
+  transition: all 0.4s;
+}
+.triangle {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-top: 21px solid transparent;
+  border-left: 20px solid #006699;
+  border-bottom: 21px solid transparent;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.sidebar ul li:hover .triangle {
+  opacity: 1;
+}
+
+.menu {
+  content: "";
+  width: 50px;
+  height: 42px;
+  background-color: #006699;
+  color: white;
+  border: none;
+  position: absolute;
+  top: 70px;
+  right: -48px;
+  border-radius: 6px;
+  display: none;
+}
+.menu i {
+  font-size: 21px;
+}
+/* ? end home content */

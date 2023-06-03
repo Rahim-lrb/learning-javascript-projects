@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+  Grid(content distributuion)
+  Parent
+  - display: grid | inline-grid(if you have an element beside it)
+
+  - grid-template-columns: [Number Of Columns one next to one] => [Px,%, Auto, fr].auto is shy fraction is greedy(consume all free space)
+    when you put auto beside fr auto takes what he needs to live
+
+  - grid-template-rows: [Number and height Of Rows ] => [Px, %, Auto, Fraction, Repeat, Mix]
+
+  - gap: [Row Gap] [Column Gap]
+
+  - justify-content: [flex-start/end center left right,space-between,around,evenly stretch] it doesnt work with fr
+
+  - align-content
+*/
+
+.test .parent {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /* grid-template-columns: auto auto auto auto; or use repeat*/
+    /* grid-template-columns: 100px 200px 25% auto;the browser takes the fixed first */
+    /* grid-template-columns: 100px auto auto 1fr; /*auto takes what it needs fr greedy takes all */
+    /* grid-template-columns: repeat(2, auto) repeat(2, 1fr); */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* grid-template-rows: 100px; it only sets height for the 1ST row */
+    /* grid-template-rows: 100px 200px 100px; */
+    /* grid-template-rows: 20% 70% 20%; */
+    /* grid-template-rows: auto auto auto; we use auto when we dont know the rest space 100px auto 200px */
+    /* grid-template-rows: auto 1fr 1fr; */
+    /* grid-template-rows: 200px 200px 200px; outside */
+    row-gap: 10px;
+    column-gap: 10px;
+    /* gap: 20px 20px; */
+}
+
+.test .parent div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.test .parent2 {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    justify-content: flex-end; /*it took the right side when there is a space thats why we put auto*/
+    grid-template-columns: repeat(4, auto);
+    grid-template-columns: 100px 100px repeat(2, auto);
+    justify-content: center;
+    justify-content: space-between;/* in flex you need to give each one a width */
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+    grid-template-rows: repeat(3, auto);
+    align-content: flex-start; /*it takes them to the top when there is space*/
+    align-content: flex-end; /*space between around evenly*/
+}
+
+.test .parent2 div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+/*
+    grid-template-areas:
+  */
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.page {
+    display: grid;
+    background-color: #eee;
+    height: 100vh;
+    grid-template-columns: repeat(10, 1fr); /*10% or 1fr id exact*/
+    grid-template-rows: 50px auto 100px;
+    grid-template-areas: 
+    "logo logo . nav nav nav nav nav nav nav" 
+    "cont cont cont cont cont cont cont cont side side"
+    "foot foot foot foot foot foot foot foot foot foot";
+}
+
+h2 {
+    grid-area: logo;
+    background-color: red;
+}
+
+nav {
+    grid-area: nav;
+    background-color: blue;
+}
+
+section {
+    grid-area: cont;
+    background-color: chartreuse;
+}
+
+aside {
+    grid-area: side;
+    background-color: crimson;
+}
+
+footer {
+    grid-area: foot;
+    background-color: darkmagenta;
+}
+
+
+
+/*
+    child
+  - grid column => [grid column start] [grid column end]
+
+  - grid row => [grid row start] [grid row end]
+
+  - grid area => [grid column start] / [gird row start] / [grid column end] / [gird row end]
+
+  - minmax
+*/
+
+.test2 .child {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+}
+.test2 .child div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.test2 .child div:nth-child(1) {
+    grid-column: 1 / 4; /*it means 1 2 3*/ 
+    grid-column: span 3;
+    grid-column: 2 / 5; /*it starts from 2 / offset is the empty place*/
+    grid-column: 2 / span 3;
+    grid-column: 1;
+    grid-row: 2/ span 2;
+    grid-row: 1 / 5;
+    grid-row: 1;
+}
+/* .test2 .child div {
+    grid-column: span 3;
+}  */
+
+/* .test2 .child div:nth-child(13) {
+    grid-row: span 2;
+} */
+
+.test2 .child div:nth-child(16) {
+    background-color: green;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 5;
+    grid-column-end: 6;
+    grid-area: 2 / 2 / 5 / 6;
+}
+
+
+
+.test2 .child2 {
+    margin: 20px auto;
+    width: 800px;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "head head nav nav nav" 
+    "head head d d d"
+    "cont cont cont cont cont";
+}
+
+.test2 .child2 div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.test2 .child2 div:nth-child(6) {
+    background-color: green;
+    grid-area: head;
+}
+
+.test2 .child2 div:nth-child(2) {
+    background-color: green;
+    grid-area: nav;
+}
+.test2 .child2 div:nth-child(3) {
+    background-color: yellow;
+    grid-area: cont;
+}
+
+
+/*responsive*/
+.test2 .resp {
+    margin: 0;
+    height: 500px;
+    background-color: #ddd;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-columns: minmax(200px, 400px) repeat(2, 1fr); /*minmax are stronger*/
+    grid-template-columns: repeat(auto-fill, 200px); /*1400px 7 1000 5 but still empty space*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-items: stretch; /*default*/
+    justify-items: center; /* start, end*/
+    align-items: stretch;
+    align-items: start;
+    place-items: center; /*shortcut*/
+    /* justify-content: flex-end; the whole*/
+}
+
+.test2 .resp div {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.test2 .resp div:nth-child(1) {/*! order css*/
+    grid-row: 2;
+    grid-column: 5;
+}
+
+/* autofill and fit */

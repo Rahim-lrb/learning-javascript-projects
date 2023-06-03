@@ -1,0 +1,406 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+ul {
+  list-style: none;
+  padding: none;
+  margin: none;
+}
+li {
+  text-decoration: none;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&display=swap');
+:root {
+  --main-color: #006699;
+}
+
+body {
+  font-family: system-ui;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.sidebar {
+  grid-column: span 2;
+  background-color: red;
+  height: 100%;
+}
+
+
+.slideshow {
+  grid-column: span 2;
+  height: 300vh;
+  background-color: #006699;
+}
+
+.content {
+  height: 300vh;
+  background-color: rebeccapurple;
+  grid-column: span 8;
+}
+
+
+.sidebar aside {
+  position: fixed;
+  height: 100%;
+  /* width: 100%; */
+  overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+
+
+/* 
+
+? start sidebar
+.page {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+ */
+
+
+
+
+
+
+/* 
+
+.sidebar:hover{
+  overflow: scroll;
+}
+.sidebar::-webkit-scrollbar {
+  display:none;
+}
+
+.sidebar h3 {
+  background-color: #006699;
+  color: white;
+  font-weight: 400;
+  line-height: 0.8;
+  font-size: 2.3rem;
+  padding-bottom: 10px;
+  margin: 40px 0 40px 40px;
+  height: 180px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 100px;
+}
+.sidebar ul {
+  padding-left: 0;
+}
+.sidebar ul li a {
+  color: #006699;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 400;
+  transition: all 0.4s;
+  margin-left: 60px;
+}
+.sidebar ul li a i {
+  font-size: 1.2rem;
+  margin-right: 1.3rem;
+}
+.sidebar ul li a:hover {
+  background-color: #f2f2f2;
+  padding: 20px 40px;
+  transform: translateX(-50%);
+}
+
+.sidebar ul li {
+  position: relative;
+  margin-bottom: 40px;
+  transition: all 0.4s;
+}
+.triangle {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  width: 0;
+  height: 0;
+  border-top: 21px solid transparent;
+  border-left: 20px solid #006699;
+  border-bottom: 21px solid transparent;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.sidebar ul li:hover .triangle {
+  opacity: 1;
+}
+
+.menu {
+  content: "";
+  width: 50px;
+  height: 42px;
+  background-color: #006699;
+  color: white;
+  border: none;
+  position: absolute;
+  top: 70px;
+  right: -48px;
+  border-radius: 6px;
+  display: none;
+}
+.menu i { 
+  font-size: 21px;
+}
+ */
+
+
+/* 
+.content {
+  width: calc(100% - 280px);
+  height: 300vh;
+
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  height: 1000vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.home-section {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.home-section .parallex-section {
+  width: 280px;
+  
+  height: 1000px;
+  float: left;
+}
+.home-section .parallex-section .parallex-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: table;
+  background-image: url(../img/img-01.jpg);
+  background-attachment: fixed;
+} 
+*/
+/* 
+.home-section .home {
+  width: calc(100% - 280px);
+  float: right;
+
+  // height: 600px;
+  padding-left: 68px;
+  padding-right: 68px;
+} 
+*/
+/* 
+.home-section .home .welcome {
+  padding-top: 40px;
+}
+.home-section .home .welcome h2 {
+  font-size: 37px;
+  font-weight: 400;
+  color: var(--main-color);
+} */
+/* 
+.hr1 {
+  height: 4px;
+  background-color: #cccccc;
+  border: none;
+}
+
+.home .info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 46px;
+  padding-bottom: 46px;
+}
+.home .info .box1 {
+  width: 47%;
+}
+.home .info .box2 {
+  width: 47%;
+}
+.info .icon {
+  font-weight: 900;
+  color: #006699;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 54px;
+
+}
+.info .icon i {
+  border: 1px solid #cccccc;
+  padding: 25px;
+}
+.info p {
+  color: #666666;
+  line-height: 2;
+}
+.info .btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.info button {
+  padding: 8px 38px;
+  background-color: #006699;
+  border: none;
+  color: white;
+  font-size: 26px;
+}
+.info button:hover {
+  background-color: #0178b4;
+}
+
+.home .hr2 {
+  background-color: #0178b4;
+  width: 40%;
+  height: 1px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+
+
+.info2 {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  height: 400px;
+  margin-top: 40px;
+}
+
+.info2 .tbox2 img {
+  height: 400px;
+  object-fit: cover;
+}
+
+.tbox1 .tiny {
+  display: flex;
+  margin-bottom: 35px;
+}
+.tbox1 .tiny .icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+  color: var(--main-color);
+}
+.tbox1 .tiny .writing {
+  padding-right: 50px;
+  line-height: 2;
+}
+.tbox1 .tiny .writing h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #006699;
+}
+.tbox1 .tiny .writing p {
+  color: #666666;
+}
+ */

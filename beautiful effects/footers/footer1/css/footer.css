@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* start variables */
+:root {
+    /* colors */
+    --bg-color: #24262b;
+    --color: #e91e63;
+    --second-color: #ffffff;
+    --main-duration: 0.3s;
+}
+/* end variables */
+/* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* end global rules */
+footer {
+    background-color: var(--bg-color);
+    padding-top: 52px;
+    padding-bottom: 52px;
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+footer .container .c h4 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 100;
+    padding-bottom: 7px;
+    position: relative;
+}
+footer .container .c h4::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+}
+
+footer .container .c ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.549);
+    text-transform: capitalize;
+    transition: var(--main-duration);
+}
+footer .container .c ul li {
+    padding: 5px 0;
+}
+
+
+footer .container .c .social-links a {
+    margin-right: 15px;
+}
+footer .container .c .social-links a i {
+    color: rgba(255, 255, 255, 0.549);
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: var(--main-duration);
+}
+footer .container .c ul li:hover a {
+    color: #ffffff;
+    padding-left: 10px;
+}
+footer .container .c .social-links a:hover i {
+    color: white;
+    animation: rotate 0.7s linear, up .5S linear;
+}
+@keyframes rotate {
+    50% {
+        transform: rotate(1turn);
+    }
+    100% {
+        transform: rotate(2turn);
+    }
+}
+@keyframes up {
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/*footer::before {
+    content: "";
+    position: absolute;
+    clip-path: circle(30%);
+    background-color: red;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+} */
+
+/* .title {
+    position: absolute;
+    inset: 0;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    top: 2%;
+    letter-spacing: 3px;
+} */
+
+/* 
+footer {
+    padding: 55px 0;
+    background-color: var(--bg-color);
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+footer .container .c h4 {
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    padding-bottom: 7px;
+    position: relative;
+}
+
+footer .container .c h4::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #e91e63;
+}
+
+footer .container .c ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.549);
+    text-transform: capitalize;
+    transition: var(--main-duration);
+}
+
+footer .container .c ul li {
+    padding: 5px 0;
+}
+
+
+footer .container .c .social-links a {
+    margin-right: 15px;
+}
+
+footer .container .c .social-links a i {
+    color: rgba(255, 255, 255, 0.549);
+    font-size: 18px;
+    padding: 8px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: var(--main-duration);
+}
+
+footer .container .c ul li:hover a {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+footer .container .c .social-links a:hover i {
+    color: white;
+    animation: rotate 0.7s linear, up .5S linear;
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(1turn);
+    }
+
+    100% {
+        transform: rotate(2turn);
+    }
+}
+
+@keyframes up {
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+} */
+
+footer .container .c h3 {
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 100;
+    padding-bottom: 7px;
+    position: relative;
+}
+footer .container .c h3 .under {
+    width: 28%;
+    height: 5px;
+    background-color: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+footer .container .c h3 .under span {
+    width: 10%;
+    height: 5px;
+    background-color: wheat;
+    border-radius: 3Px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moving 3S linear infinite;
+}
+@keyframes moving {
+    50% {
+        transform: translateX(71px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

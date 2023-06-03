@@ -1,0 +1,283 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+ul {
+  list-style: none;
+  padding: none;
+  margin: none;
+}
+li {
+  text-decoration: none;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&display=swap');
+:root {
+  --main-color: #006699;
+}
+
+body {
+  font-family: system-ui;
+}
+
+
+
+
+/* start  */
+.container {
+    background-color: #424242;
+    display: grid;
+    grid-template-columns: 280px 280px auto;
+}
+
+
+.slidebar {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+
+
+.slideShow {
+    background-color: blue;
+    height: 100vh;
+    width: 100%;
+}
+
+
+.aside {
+    position: fixed;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    overflow: scroll;
+}
+
+.aside::-webkit-scrollbar {
+    display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside h3 {
+        background-color: #006699;
+        color: white;
+        font-weight: 400;
+        line-height: 0.8;
+        font-size: 2.3rem;
+        padding-bottom: 10px;
+        margin: 40px 0 40px 40px;
+        height: 180px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 100px;
+}
+
+
+
+aside ul {
+padding-left: 0;
+}
+aside ul li a {
+    color: #006699;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    transition: all 0.4s;
+    margin-left: 60px;
+}
+aside ul li a i {
+    font-size: 1.2rem;
+    margin-right: 1.3rem;
+}
+aside ul li a:hover {
+    background-color: #f2f2f2;
+    padding: 20px 40px;
+    transform: translateX(-50%);
+}
+
+aside ul li {
+    position: relative;
+    margin-bottom: 40px;
+    transition: all 0.4s;
+}
+.triangle {
+    position: absolute;
+    top: 2px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-top: 21px solid transparent;
+    border-left: 20px solid #006699;
+    border-bottom: 21px solid transparent;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+aside ul li:hover .triangle {
+    opacity: 1; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box {
+    font-size: 30px;
+    color: white;
+    height: 120vh;
+}
+.box:first-child {
+    background-image: url(1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.box:nth-child(2) {
+    background-image: url(2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.box:nth-child(3) {
+    background-image: url(3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.box:last-child {
+    background-image: url(4.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.welcome,
+.gallery,
+.templete,
+.contact {
+    height: 120vh;
+    display: flex;
+    background-color: #ffddff;
+    justify-content: center;
+    align-items: center;
+    color: rgb(62, 58, 58);
+    font-size: 35px;
+    border-bottom: 10px solid white;
+}
+
+.contact {
+    border: none;
+    background-color: #ffddff;
+}

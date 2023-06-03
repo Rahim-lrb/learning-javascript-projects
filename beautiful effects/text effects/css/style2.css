@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    padding: 0 20px;
+    margin: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    gap: 20px;
+}
+.grid .text {
+    width: 300px;
+    height: 250px;
+    background-color: transparent;
+    position: relative;
+}
+
+
+
+
+.text:nth-child(1) h2 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+
+    color: #222;
+}
+
+.text:nth-child(1) h2::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap; /* ! so it wont jump to the other line*/
+    border-right: 3px solid white;
+    animation: animate 8s linear infinite;
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px #fff);
+}
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.text:nth-child(2) h2 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+
+    width: 100%;
+    color: #111;
+    -webkit-text-stroke: 0.3vw #222;
+}
+.text:nth-child(2) h2::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #01fe87;
+    -webkit-text-stroke: 0.3vw #222;
+    border-right: 2px solid #01fe87;
+    animation: animate2 8s ease infinite;
+}
+@keyframes animate2 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+.text:nth-child(3) h2 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, #00dbde, #fc00ff);
+    -webkit-background-clip: text; /* ! it transfers the background to be the text background  */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* ! so you can fill the text*/
+}
+
+
+
+
+
+.text:nth-child(5) {
+    position: relative;
+    grid-column: span 4;
+    width: 100%;
+}
+.text:nth-child(5) span {
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    /* text-transform: uppercase; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+}
