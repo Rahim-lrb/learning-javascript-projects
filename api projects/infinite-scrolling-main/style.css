@@ -1,0 +1,28 @@
+.img-container {
+  width: 20vh;
+  height: 20vh;
+  border: 1px solid black;
+  visibility: hidden;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6vh;
+}
+
+.header {
+  position: fixed;
+}
+#footer {
+  height: 6vh;
+  width: 100vw;
+}
+
+body {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
